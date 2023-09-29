@@ -98,22 +98,17 @@ function updateAge(){
 $(document).ready(function()
 {	
 	update_lang();
-
 	loadMenubar();
 	loadFooter();
 	updateAge();
-
 	$(window).on('resize', function(){
 		$('.right-menu-dropmenu').hide();
 	});
-
 	show_lang($(this),lang);
-
 	$(window).load(function(){
 		$('html').css('display', 'block');
 		lastUpdated();
 	});
-
 });
 
 function update_lang(){
@@ -135,7 +130,6 @@ function show_lang(that,language){
 			$(that).find('.'+langs[l]).each(function(){$(this).hide()});
 		}
 	};
-	
 }
 
 function date_mmmddyyHHMM(date)
@@ -147,9 +141,7 @@ function date_mmmddyyHHMM(date)
 		( 4==m)?'Apr':( 5==m)?'May':(6==m)?'Jun':
 		( 7==m)?'Jul':( 8==m)?'Aug':(9==m)?'Sep':
 		(10==m)?'Oct':(11==m)?'Nov':'Dec';
-
-	return "" +
-    mmm + " " + y;
+	return "" + mmm + " " + y;
 }
 
 function lastUpdated(){
@@ -159,7 +151,6 @@ function lastUpdated(){
 		if(0 != (d1=Date.parse(document.lastModified))) {
 			s = "" + date_mmmddyyHHMM(new Date(d1)) + ".";
 		}
-	  
 		$('.update-time').text('Last updated on ' + s);
 	}
 	if($('.current-version').length){
