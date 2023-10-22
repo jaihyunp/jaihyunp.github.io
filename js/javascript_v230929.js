@@ -34,7 +34,7 @@
 // SOFTWARE.
 //
 
-var versionUpdate='2.1.0';
+var versionUpdate='2.0.1';
 var lang = 'eng';
 var langs = ['eng','kor']
 
@@ -87,6 +87,7 @@ function loadFooter() {
 function updateAge(){
 	if( $('.update-birth').length > 0 ){
 		var myAge;
+		// var birth = new Date(Date.parse('1994 Sep 21 0:0:0 UTC')).getTime();
 		var birth = new Date(Date.parse('1994/9/21')).getTime();
 		setInterval(function(){
 			myAge = new Number(new Date(new Date().getTime() - birth) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(10);
@@ -102,6 +103,8 @@ $(document).ready(function()
 	loadMenubar();
 	loadFooter();
 	updateAge();
+
+
 
 	applyClickEvent(); 
 
@@ -153,8 +156,11 @@ function show_lang(that,language){
 
 function date_mmmddyyHHMM(date)
 {
+	var d = date.getDate();
 	var m = date.getMonth() + 1;
 	var y = date.getFullYear();
+	var h = date.getHours();
+	var mm = date.getMinutes();
 	var mmm = 
 		( 1==m)?'Jan':( 2==m)?'Feb':(3==m)?'Mar':
 		( 4==m)?'Apr':( 5==m)?'May':(6==m)?'Jun':
@@ -162,7 +168,8 @@ function date_mmmddyyHHMM(date)
 		(10==m)?'Oct':(11==m)?'Nov':'Dec';
 
 	return "" +
-    mmm + " " + y;
+    mmm + " " + (d<10?"0"+d:d) + ", " +
+    y + " at " + (h<10?"0"+h:h) + ":" + (mm<10?"0"+mm:mm);
 }
 
 function lastUpdated(){
@@ -170,7 +177,7 @@ function lastUpdated(){
 		var s  = "Unknown";
 		var d1;
 		if(0 != (d1=Date.parse(document.lastModified))) {
-			s = "" + date_mmmddyyHHMM(new Date(d1)) + ".";
+			s = "" + date_mmmddyyHHMM(new Date(d1));
 		}
 	  
 		$('.update-time').text('Last updated on ' + s);
