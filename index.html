@@ -52,38 +52,42 @@ SOFTWARE.
     <link rel='shortcut icon' href='assets/icons/logo-fill.png' type='image/x-icon'></link>
 
     <style>
-        .main-profile{z-index:20;margin:auto;padding-top:150px;position:relative;margin-bottom:50px}
-        .main-profile *{position:relative!important}
-        .main-profile > img {width:240px;position:relative;margin-left:auto;margin-right:40px;margin-top:0px}
+        .main-profile {z-index:20;margin:auto;padding-top:150px;position:relative;margin-bottom:38px}
+        .main-profile * {position:relative!important}
+        .main-profile > img {width:260px;position:relative;margin-left:auto;margin-right:20px;margin-top:10px}
         .main-profile > div {width:650px;position:relative;margin-bottom:0px;margin-top:auto;margin-right:auto;margin-left:40px}
-        .main-profile h1 {font-family:'noto-eng','noto-kor';font-size:30pt;color:black}
-        .main-profile h2 {font-family:'noto-eng-ii','noto-kor-ii';font-size:10pt;color:#101010}
+        .main-profile h1 {font-family:'noto-eng-i','noto-kor-i';font-size:30pt;color:black;letter-spacing:3px;}
+        .main-profile h2 {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:#101010;font-weight:300; letter-spacing:0.5pt}
 
-        .social {margin-top:10px;margin-bottom:45px;display:flex}
-        .social li {text-align:left;display:flex;margin-left:0;margin-right:20px}
+        .social {margin-top:10px;margin-bottom:15px;display:flex}
+        .social li {text-align:left;display:flex;margin-left:0;margin-right:30px}
         .social a {display:flex; border-bottom: 1pt white solid}
-        .social img {width:22px;height:22px}
-        .social p {display:inline;margin:auto 5px;font-family:'noto-eng-i','noto-kor-i';font-size:9.5pt;text-align:left;color:black;margin-bottom:0px!important}
+        .social img {width:28px;height:28px}
+        .social p {display:none;margin:auto 5px;font-family:'noto-eng-i','noto-kor-i';font-size:9.5pt;text-align:left;color:black;margin-bottom:0px!important}
 
-        .bio {font-family:'noto-eng-i','noto-kor-i';font-size:12pt;color:black;text-align:left!important;margin-top:20px;margin-bottom: 5px}
+        .bio {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;text-align:left!important;margin-top:15px;margin-bottom: 5px;letter-spacing:0.5pt;font-weight:0;}
 
-        .news, .topics{position:relative;z-index:20;margin:auto;margin-bottom:70px}
+        .news, .topics{position:relative;z-index:20;margin:auto;margin-bottom:80px}
         .news *, .topics *{position:relative!important}
-        .news > h1, .topics > h1{font-family:'noto-eng-b','noto-kor-b';font-size:20pt;color:indianred;}
+        .news > h1, .topics > h1{font-family:'noto-eng','noto-kor';font-size:21pt;color:indianred;margin-bottom: 20px;letter-spacing:4px;}
         .news ol, .topics ol {margin-top:15px}
         .news ol li, .topics ol li {list-style-type:none;margin-top:10px;padding-bottom:5px}
-        .news ol li p, .topics ol li p {font-family:'noto-eng-i','noto-kor-i';font-size:12pt;color:black;margin:auto;text-align:left!important}
-        .news ol li a, .topics ol li a {font-style:italic;}
-        .news ol li h1 {min-width:100px;font-family:'noto-eng-i','noto-kor-i';font-size:12pt;color:black;margin:0px;margin-bottom:auto;text-align:left!important}
+        .news ol li p, .topics ol li p {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;margin:auto;text-align:left!important;letter-spacing: 0.5pt;}
+        .news ol li a, .topics ol li a {font-family: 'noto-eng-i','noto-kor-i';}
+        .news ol li h1 {min-width:100px;font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;margin:0px;margin-bottom:auto;text-align:left!important}
+        .news ol li h2 {min-width:100px;font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;margin:0px;margin-bottom:auto;text-align:left!important}
         .news ol li p {margin-left:20px}
 
-        .topics > h1 {margin-bottom: 20px}
-        .topics ol li{margin-bottom: 40px}
-        .topics ol li div{margin-top: 0px}
-        .topics ol li h1 {font-family: 'noto-eng', 'noto-kor'; font-size: 14pt; color: indianred; text-align: left;margin-left: 0px}
-        .topics ol li p {margin: 0px}
-        .topics ol li img {margin: 0px;margin-bottom: 10px}
-        .topics img {width: 150px; height: 150px}
+        /* .topics > h1 {margin-bottom: 20px;letter-spacing:5px;} */
+        .topics ol li{margin-bottom: 30px}
+        .topics ol li div{margin-top: 0px;margin-left: 0px}
+        .topics ol li h1 {font-family: 'noto-eng-i', 'noto-kor-i'; font-size: 13pt; color: indianred; text-align: left;margin-left: 0px;margin-bottom:5px;letter-spacing:2px;}
+        .topics ol li h2 {font-family: 'noto-eng-i', 'noto-kor-i'; font-size: 14pt; color: black; text-align: center;margin-left: 0px;margin-bottom:5px;letter-spacing:2px;font-weight:300;}
+        .topics ol li h3 {font-family: 'noto-eng-ii', 'noto-kor-ii'; font-size: 10pt; color: black; text-align: left;margin-left: 0px;margin-bottom:15px;letter-spacing:0px;font-weight:300;}
+        .topics ol li p {margin: 0px;
+            word-wrap:break-word;hyphens:auto;}
+        .topics ol li img {margin: 0px;margin-bottom: 10px; margin-right:30px}
+        .topics img {width: 150px; height: 150px; }
 
         @media screen and (max-width: 1000px) {
             .main-profile{margin-bottom:80px;width:90%}
@@ -95,8 +99,10 @@ SOFTWARE.
 
             .news > div, .main-profile > div {margin-top: 40px}
             .news > h1, .topics h1, .main-profile h1{text-align:center!important}
-            .news li h1, .topics li h1 {font-size:14pt}
+            .news li h1, .topics li h1 {font-size:12pt}
+            .news li h2, .topics li h2 {font-size:12pt;text-align:center!important;}
             .news li p, .topics li p {font-size:10pt}
+            .topics ol li img {margin: 0px;margin-bottom: 10px;}
 
             .social li {margin:auto}
             .social p {display:none}
@@ -113,7 +119,7 @@ SOFTWARE.
         <img src='assets/imgs/profile-picture.png'>
         <div>
             <h1 class='kor'>박 재 현</h1>
-            <h1 class='eng'>Jai Hyun Park</h1>
+            <h1 class='eng'>Jai Hyun PARK</h1>
             
             <h2>Researcher • CryptoLab in Lyon, France</h2>
             <ul class='social'>
@@ -141,15 +147,24 @@ SOFTWARE.
                         <p>Github</p>
                     </a>
                 </li>
+                <li>
+                    <a href='https://www.linkedin.com/in/jai-hyun-park/'>
+                        <img src='assets/icons/black-linkedin-logo-15915.png'/>
+                        <p>Linkedin</p>
+                    </a>
+                </li>
+
             </ul>
 
             <p class='bio eng'>
                 Hi! I am a full-time researcher at CryptoLab in Lyon, France.
                 <!-- My advisor is <a href='http://www.math.snu.ac.kr/~jhcheon/xe2/'>Prof. Jung Hee Cheon</a>.</br></br> -->
-                I am interested in a broad range of topics in cryptography. My current research focuses on homomorphic encryption and its applications.</br></br>
-
+                I am interested in a broad range of topics in cryptography. My current research focuses on homomorphic encryption and its applications.
+            </br></br>
                 I obtained my Ph.D. from the Department of Mathematical Sciences at Seoul National University, advised by <a href='http://www.math.snu.ac.kr/~jhcheon/xe2/'>Prof. Jung Hee Cheon</a>. Here is my 
                 <a href="assets/CV.pdf">Curriculum Vitae</a>.
+            </br></br>
+                ✉️ Email: jaihyunp (at) cryptolab (dot) co (dot) kr
             </p>
             <p class='bio kor'>
                 안녕하세요! 저는 프랑스 리옹에 있는 CryptoLab에서 전임 연구원으로 일하고 있습니다.
@@ -180,9 +195,14 @@ SOFTWARE.
 
             <li class="flex-block">
                 <h1>Aug 2024</h1>
+                <p class='eng'>I presented a paper titled <a href='https://ia.cr/2024/1284'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> at <a href="https://youtu.be/v7kjCjJfakY?t=3985">Crypto 2024</a>. This paper is included in my thesis.</p>
+                <p class='kor'>논문 <a href='https://ia.cr/2024/1284'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> 를 <a href="https://youtu.be/v7kjCjJfakY?t=3985">Crypto 2024</a> 에서 발표했습니다. 이 논문은 제 졸업논문에 포함되어 있습니다. </p>
+            </li>
+            <!-- <li class="flex-block">
+                <h1>Aug 2024</h1>
                 <p class='eng'>I presented a paper titled <a href='https://doi.org/10.1007/978-3-031-68382-4_12'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> at <a href="https://crypto.iacr.org/2024/">Crypto 2024</a>. This paper is included in my thesis. The video is available on <a href='https://youtu.be/v7kjCjJfakY?t=3985'>YouTube</a>, and the full-version paper is available on <a href="https://ia.cr/2024/1284">eprint</a>.</p>
                 <p class='kor'>논문 <a href='https://doi.org/10.1007/978-3-031-68382-4_12'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> 를 <a href="https://crypto.iacr.org/2024/">Crypto 2024</a> 에서 발표했습니다. 이 논문은 제 졸업논문에 포함되어 있습니다. 발표는 <a href='https://youtu.be/v7kjCjJfakY?t=3985'>유튜브</a> 에서, 논문의 풀버전은 <a href="https://ia.cr/2024/1284">eprint</a> 에서 확인하실 수 있습니다.</p>
-            </li>
+            </li> -->
 
             <!-- <li class="flex-block">
                 <h1>Jul 2024</h1>
@@ -204,9 +224,15 @@ SOFTWARE.
 
             <li class="flex-block">
                 <h1>Aug 2023</h1>
+                <p class='eng'>I presented a paper titled <a href='https://ia.cr/2023/1244'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a> at <a href="https://youtu.be/TKJLxIvu7GA?t=1266">Crypto 2023</a>.</p>
+                <p class='kor'>논문 <a href='https://ia.cr/2023/1244'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a>  를 <a href="https://youtu.be/TKJLxIvu7GA?t=1266">Crypto 2023</a> 에서 발표했습니다.</p>
+            </li>
+            
+            <!-- <li class="flex-block">
+                <h1>Aug 2023</h1>
                 <p class='eng'>I presented a paper titled <a href='https://doi.org/10.1007/978-3-031-38551-3_2'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a> at <a href="https://crypto.iacr.org/2023/">Crypto 2023</a>. The video is available on <a href='https://youtu.be/TKJLxIvu7GA?t=1266'>YouTube</a>, and the full-version paper is available on <a href="https://ia.cr/2023/1244">eprint</a>.</p>
                 <p class='kor'>논문 <a href='https://doi.org/10.1007/978-3-031-38551-3_2'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a>  를 <a href="https://crypto.iacr.org/2023/">Crypto 2023</a> 에서 발표했습니다. 발표는 <a href='https://youtu.be/TKJLxIvu7GA?t=1266'>유튜브</a> 에서, 논문의 풀버전은 <a href="https://ia.cr/2023/1244">eprint</a> 에서 확인하실 수 있습니다.</p>
-            </li>
+            </li> -->
 
             <!-- <li class="flex-block">
                 <h1>May 2023</h1>
@@ -226,7 +252,7 @@ SOFTWARE.
                 <p class='kor'>1~2 월에 <a href="https://cryptolab.co.kr">크립토랩</a> 에서 연구인턴을 했습니다.</p>
             </li> -->
 
-            <li class="flex-block">
+            <!-- <li class="flex-block">
                 <h1>Jul 2022</h1>
                 <p class='eng'>The paper <a href="https://doi.org/10.1109/TIFS.2022.3188145">"Efficient Homomorphic Evaluation on Large Intervals"</a> was published in <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206">IEEE Transactions on Information Forensics and Security</a>.</p>
                 <p class='kor'>논문 <a href="https://doi.org/10.1109/TIFS.2022.3188145">"Efficient Homomorphic Evaluation on Large Intervals"</a> 이 <a href="https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=10206">IEEE Transactions on Information Forensics and Security</a> 에 게재됐습니다.</p>
@@ -236,7 +262,7 @@ SOFTWARE.
                 <h1>Jul 2022</h1>
                 <p class='eng'>The paper <a href="https://aclanthology.org/2022.naacl-main.231/">"Privacy-Preserving Text Classification on BERT Embeddings with Homomorphic Encryption"</a> was presented at <a href="https://2022.naacl.org/">NAACL 2022</a>.</p>
                 <p class='kor'>논문 <a href="https://aclanthology.org/2022.naacl-main.231/">"Privacy-Preserving Text Classification on BERT Embeddings with Homomorphic Encryption"</a> 이 <a href="https://2022.naacl.org/">NAACL 2022</a> 에서 발표됐습니다.</p>
-            </li>
+            </li> -->
 
             <!-- <li class="flex-block">
                 <h1>Apr 2022</h1>
@@ -300,6 +326,58 @@ SOFTWARE.
             </li>
         </ol>
     </div>
+
+    <div class="topics wider-piece">
+        <h1 class='eng'>Selected Publications</h1>
+        <h1 class='kor'>일부 논문들</h1>
+        <ol class="grid-3-1-ul">
+            <li>
+                <div>
+                    <h2>Plaintext-ciphertext matrix multiplication and FHE bootstrapping: fast and fused</h2>
+                    <h3>
+                        with Youngjin Bae, Jung Hee Cheon, Guillaume Hanrot, and Damien Stehlé. 
+                        In CRYPTO 2024
+                        [<a href='https://eprint.iacr.org/2024/1284'>pdf</a>]
+                        [<a href='https://youtu.be/v7kjCjJfakY?t=3985'>talk</a>]
+                    </h3>
+                    <p style="font-size:10pt">
+                        We introduce fast algorithms for multiplying plaintext and ciphertext matrices (PC-MM), a central task for the privacy-preserving computations. Our algorithms handle various matrix dimensions with or without precomputations. In addition, we accelerate FHE bootstrapping when several ciphertexts are bootstrapped at once. 
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h2>HERMES: efficient ring packing using MLWE ciphertexts and application to tranciphering</h2>
+                    <h3>
+                        with Youngjin Bae, Jung Hee Cheon, Jaehyung Kim, and Damien Stehlé. 
+                        In CRYPTO 2023 
+                        [<a href='https://eprint.iacr.org/2023/1244'>pdf</a>]
+                        [<a href='https://youtu.be/TKJLxIvu7GA?t=1266'>talk</a>]</p>
+                    </h3>
+                    <p style="font-size:10pt;">
+                        Most fully homomorphic encryption schemes rely on either the learning-with-errors (LWE) problem or its ring variant (RLWE). We introduce HERMES, an efficient ring packing algorithm that converts the format between LWE and RLWE. Using HERMES, we also suggest a fast transciphering algorithm from LWE symmetric encryption to CKKS scheme.
+                    </p>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <h2>Efficient homomorphic evaluation over large intervals</h2>
+                    <h3>
+                        with Jung Hee Cheon and Wootae Kim. 
+                        In TIFS 
+                        [<a href='https://eprint.iacr.org/2022/280'>pdf</a>]
+                    </h3>
+                    <p style="font-size:10pt;">
+                        Homomorphic evaluations generally incur a significant overhead. While knowing that data is confined to a narrow range can greatly reduce the overhead, such constraints are not always applicable. In this paper, we propose an efficient method for homomorphic evaluation of several functions over large ranges. 
+                    </p>
+                </div>
+            </li>
+
+        </ol>
+    </div>
+
 
     <!-- footer -->
     <footer class="load-footer" id='footer'></footer>
