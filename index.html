@@ -69,7 +69,7 @@ SOFTWARE.
 
         .news, .topics{position:relative;z-index:20;margin:auto;margin-bottom:80px}
         .news *, .topics *{position:relative!important}
-        .news > h1, .topics > h1{font-family:'noto-eng','noto-kor';font-size:21pt;color:indianred;margin-bottom: 20px;letter-spacing:4px;}
+        .news > h1, .topics > h1{font-family:'noto-eng','noto-kor';font-size:21pt;color:indianred;margin-bottom: 15px;letter-spacing:4px;}
         .news ol, .topics ol {margin-top:15px}
         .news ol li, .topics ol li {list-style-type:none;margin-top:10px;padding-bottom:5px}
         .news ol li p, .topics ol li p {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;margin:auto;text-align:left!important;letter-spacing: 0.5pt;}
@@ -168,11 +168,14 @@ SOFTWARE.
             </p>
             <p class='bio kor'>
                 안녕하세요! 저는 프랑스 리옹에 있는 CryptoLab에서 전임 연구원으로 일하고 있습니다.
-
                 저는 암호학의 다양한 주제에 관심이 있으며, 현재 연구는 동형암호와 그 응용에 중점을 두고 있습니다.
-                
+
+                </br></br>                
                 저는 서울대학교 수리과학부에서 천정희 교수님 지도 아래 박사 학위를 받았습니다. 제 <a href="assets/CV.pdf">이력서</a>입니다. 
-            </p>
+
+                </br></br>
+                ✉️ 이메일: jaihyunp (at) cryptolab (dot) co (dot) kr
+        </p>
 
         </div>
     </header>
@@ -190,7 +193,7 @@ SOFTWARE.
             <li class="flex-block">
                 <h1>Aug 2024</h1>
                 <p class="eng">I complete my PhD course at Seoul National University. The title of my thesis is "Matrix Multiplication on Encrypted Data". </p>
-                <p class="kor">서울대학교 박사과정을 마쳤습니다! 졸업논문 제목은 "암호화된 상태에서의 행렬 곱셈" 입니다.</p>                
+                <p class="kor">서울대학교 박사과정을 마쳤습니다! 졸업논문 제목은 "암호화된 상태에서의 행렬 곱셈에 관한 연구" 입니다.</p>                
             </li>
 
             <li class="flex-block">
@@ -329,7 +332,7 @@ SOFTWARE.
 
     <div class="topics wider-piece">
         <h1 class='eng'>Selected Publications</h1>
-        <h1 class='kor'>일부 논문들</h1>
+        <h1 class='kor'>주요 연구 소개</h1>
         <ol class="grid-3-1-ul">
             <li>
                 <div>
@@ -340,23 +343,29 @@ SOFTWARE.
                         [<a href='https://eprint.iacr.org/2024/1284'>pdf</a>]
                         [<a href='https://youtu.be/v7kjCjJfakY?t=3985'>talk</a>]
                     </h3>
-                    <p style="font-size:10pt">
-                        We introduce fast algorithms for multiplying plaintext and ciphertext matrices (PC-MM), a central task for the privacy-preserving computations. Our algorithms handle various matrix dimensions with or without precomputations. In addition, we accelerate FHE bootstrapping when several ciphertexts are bootstrapped at once. 
+                    <p class='eng' style="font-size:10pt">
+                        We introduce fast algorithms for multiplying plaintext and ciphertext matrices, a central task for the privacy-preserving computations. Our algorithms handle various matrix dimensions with or without precomputations. In addition, we accelerate FHE bootstrapping when several ciphertexts are bootstrapped at once. 
+                    </p>
+                    <p class='kor' style="font-size:10pt">
+                        본 연구는 평문 행렬과 암호문 행렬의 곱셈을 위한 빠른 알고리즘을 제안합니다. 이는 암호화된 상태에서의 계산에서 중요한 문제입니다. 제안된 알고리즘은 다양한 크기의 행렬을 처리할 수 있으며, 사전 계산을 활용한 방법도 포함됩니다. 또한, 여러 암호문을 더 효율적으로 동시에 부트스트래핑(FHE bootstrapping)하는 방법도 제시합니다.
                     </p>
                 </div>
             </li>
 
             <li>
                 <div>
-                    <h2>HERMES: efficient ring packing using MLWE ciphertexts and application to tranciphering</h2>
+                    <h2>HERMES: efficient ring packing using MLWE ciphertexts and application to transciphering</h2>
                     <h3>
                         with Youngjin Bae, Jung Hee Cheon, Jaehyung Kim, and Damien Stehlé. 
                         In CRYPTO 2023 
                         [<a href='https://eprint.iacr.org/2023/1244'>pdf</a>]
                         [<a href='https://youtu.be/TKJLxIvu7GA?t=1266'>talk</a>]</p>
                     </h3>
-                    <p style="font-size:10pt;">
-                        Most fully homomorphic encryption schemes rely on either the learning-with-errors (LWE) problem or its ring variant (RLWE). We introduce HERMES, an efficient ring packing algorithm that converts the format between LWE and RLWE. Using HERMES, we also suggest a fast transciphering algorithm from LWE symmetric encryption to CKKS scheme.
+                    <p class='eng' style="font-size:10pt">
+                        Most HE schemes rely on either the learning-with-errors (LWE) problem or its ring variant (RLWE). We introduce HERMES, an efficient ring packing algorithm that converts the format between LWE and RLWE. Using HERMES, we also suggest a fast transciphering algorithm from LWE symmetric encryption to CKKS scheme.
+                    </p>
+                    <p class='kor' style="font-size:10pt">
+                        현재 대부분의 동형 암호 스킴은 LWE 문제 혹은 RLWE 문제에 기반합니다. 본 연구는 LWE와 RLWE 간의 형식을 변환하는 효율적인 링 패킹 알고리즘인 HERMES를 소개합니다. 더 나아가, HERMES를 활용해 LWE 기반 대칭 암호에서 CKKS 스킴으로의 빠른 트랜스사이퍼링(transciphering) 알고리즘도 제안합니다.
                     </p>
                 </div>
             </li>
@@ -369,13 +378,19 @@ SOFTWARE.
                         In TIFS 
                         [<a href='https://eprint.iacr.org/2022/280'>pdf</a>]
                     </h3>
-                    <p style="font-size:10pt;">
+                    <p class='eng' style="font-size:10pt;">
                         Homomorphic evaluations generally incur a significant overhead. While knowing that data is confined to a narrow range can greatly reduce the overhead, such constraints are not always applicable. In this paper, we propose an efficient method for homomorphic evaluation of several functions over large ranges. 
+                    </p>
+                    <p class='kor' style="font-size:10pt">
+                        암호화된 계산은 일반적으로 상당한 오버헤드를 동반합니다. 데이터가 좁은 범위 내에 있다는 정보만으로도 계산량을 크게 줄일 수 있지만, 이러한 제약은 대부분의 경우 적용할 수 없습니다. 본 연구에서는 특정 함수들에 대해 넓은 범위에 분포된 데이터를 암호화된 상태에서 효율적으로 처리하는 방법을 제안합니다.
                     </p>
                 </div>
             </li>
-
         </ol>
+        <p class='eng' style="font-family:'noto-eng-i','noto-kor-i';font-weight:300;font-size:11pt;font-style:italic">For the complete list of my publications, please click <a href="publications.html?lang=eng">here</a>.</p>
+        <p class='kor' style="font-family:'noto-eng-i','noto-kor-i';font-weight:300;font-size:11pt;font-style:italic">
+            전체 연구 목록은 <a href="publications.html?lang=kor">여기</a>를 클릭해 주세요.
+        </p>
     </div>
 
 
