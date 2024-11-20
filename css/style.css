@@ -253,14 +253,10 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     padding-left: 20px;
     border-left: 3px gray solid;}
 .grid-3-1-ul > li h1 {
-    font-family: 'noto-eng','noto-kor';
-    font-size: 12pt;
     position: relative;
     margin:auto;
     margin-left:0;}
 .grid-3-1-ul > li p {
-    font-family: 'noto-eng-i','noto-kor-i';
-    font-size: 12pt;
     position: relative;
     margin:auto;
     margin-right:0;}
