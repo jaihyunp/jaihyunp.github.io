@@ -56,7 +56,7 @@ SOFTWARE.
         .main-profile * {position:relative!important}
         .main-profile > img {width:260px;position:relative;margin-left:auto;margin-right:20px;margin-top:10px}
         .main-profile > div {width:650px;position:relative;margin-bottom:0px;margin-top:auto;margin-right:auto;margin-left:40px}
-        .main-profile h1 {font-family:'noto-eng-i','noto-kor-i';font-size:30pt;color:black;letter-spacing:3px;}
+        .main-profile h1 {font-family:'noto-eng-i','noto-kor-i';font-size:30pt;color:black;letter-spacing:3px;font-weight:300}
         .main-profile h2 {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:#101010;font-weight:300; letter-spacing:0.5pt}
 
         .social {margin-top:10px;margin-bottom:15px;display:flex}
@@ -65,12 +65,12 @@ SOFTWARE.
         .social img {width:28px;height:28px}
         .social p {display:none;margin:auto 5px;font-family:'noto-eng-i','noto-kor-i';font-size:9.5pt;text-align:left;color:black;margin-bottom:0px!important}
 
-        .bio {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;text-align:left!important;margin-top:15px;margin-bottom: 5px;letter-spacing:0.5pt;font-weight:0;word-wrap:break-word;hyphens:auto;}
+        .bio {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;text-align:left!important;margin-top:15px;margin-bottom: 10px;letter-spacing:0.5pt;font-weight:100;word-wrap:break-word;hyphens:auto;}
 
         .news, .topics{position:relative;z-index:20;margin:auto;margin-bottom:80px}
         .news *, .topics *{position:relative!important}
-        .news > h1, .topics > h1{font-family:'noto-eng','noto-kor';font-size:21pt;color:indianred;margin-bottom: 15px;letter-spacing:4px;}
-        .news ol, .topics ol {margin-top:15px}
+        .news > h1, .topics > h1{font-family:'noto-eng','noto-kor';font-size:22pt;color:indianred;margin-bottom: 15px;letter-spacing:4px;font-weight:300}
+        .news ol, .topics ol {margin-top:20px}
         .news ol li, .topics ol li {list-style-type:none;margin-top:10px;padding-bottom:5px}
         .news ol li p, .topics ol li p {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;margin:auto;text-align:left!important;letter-spacing: 0.5pt;}
         .news ol li a, .topics ol li a {font-family: 'noto-eng-i','noto-kor-i';}
@@ -185,6 +185,12 @@ SOFTWARE.
         <h1 class='kor'>최근 소식들</h1>
         <ol>
             <li class="flex-block">
+                <h1>Dec 2024</h1>
+                <p class="eng">I'll be delivering sessions on homomorphic linear algebra as a part of <a href="https://perso.ens-lyon.fr/alain.passelegue/teaching/m2_2024.html">"Fully Homomorphic Encryption"</a> course (Fall 2024, M2) at <a href="https://www.ens-lyon.fr/en/">ENS Lyon</a>.</p>
+                <p class="kor"><a href="https://www.ens-lyon.fr/en/">ENS Lyon</a>의 2024년 가을학기 M2 과정 "Fully Homomorphic Encryption" 강좌에서 동형 선형대수에 대한 수업을 일부 진행할 예정입니다. </p>
+
+            </li>
+            <li class="flex-block">
                 <h1>Sep 2024</h1>
                 <p class="eng">I started working as a full-time researcher at CryptoLab in Lyon, France!</p>
                 <p class="kor">프랑스 리옹의 CryptoLab에서 전임 연구원으로 일하기 시작했습니다.</p>                
@@ -198,8 +204,8 @@ SOFTWARE.
 
             <li class="flex-block">
                 <h1>Aug 2024</h1>
-                <p class='eng'>I presented a paper <a href='https://ia.cr/2024/1284'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> at <a href="https://youtu.be/v7kjCjJfakY?t=3985">Crypto 2024</a>. This paper is included in my thesis.</p>
-                <p class='kor'>논문 <a href='https://ia.cr/2024/1284'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> 를 <a href="https://youtu.be/v7kjCjJfakY?t=3985">Crypto 2024</a> 에서 발표했습니다. 이 논문은 제 졸업논문에 포함되어 있습니다. </p>
+                <p class='eng'>I presented a paper <a href='https://ia.cr/2024/1284'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> at <a href="https://crypto.iacr.org/2024/">Crypto 2024</a>: [<a href="https://youtu.be/v7kjCjJfakY?t=3985">Youtube</a>]. This paper is included in my thesis.</p>
+                <p class='kor'>논문 <a href='https://ia.cr/2024/1284'>"Plaintext-Ciphertext Matrix Multiplication and FHE Bootstrapping: Fast and Fused"</a> 를 <a href="https://crypto.iacr.org/2024/">Crypto 2024</a> 에서 발표했습니다: [<a href="https://youtu.be/v7kjCjJfakY?t=3985">Youtube</a>]. 이 논문은 제 졸업논문에 포함되어 있습니다. </p>
             </li>
             <!-- <li class="flex-block">
                 <h1>Aug 2024</h1>
@@ -227,8 +233,8 @@ SOFTWARE.
 
             <li class="flex-block">
                 <h1>Aug 2023</h1>
-                <p class='eng'>I presented a paper <a href='https://ia.cr/2023/1244'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a> at <a href="https://youtu.be/TKJLxIvu7GA?t=1266">Crypto 2023</a>.</p>
-                <p class='kor'>논문 <a href='https://ia.cr/2023/1244'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a>  를 <a href="https://youtu.be/TKJLxIvu7GA?t=1266">Crypto 2023</a> 에서 발표했습니다.</p>
+                <p class='eng'>I presented a paper <a href='https://ia.cr/2023/1244'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a> at <a href="https://crypto.iacr.org/2023/">Crypto 2023</a>: [<a href="https://youtu.be/TKJLxIvu7GA?t=1266">Youtube</a>].</p>
+                <p class='kor'>논문 <a href='https://ia.cr/2023/1244'>"HERMES: Efficient Ring Packing using MLWE Ciphertexts and Application to Transciphering"</a>  를 <a href="https://crypto.iacr.org/2023/">Crypto 2023</a> 에서 발표했습니다: [<a href="https://youtu.be/TKJLxIvu7GA?t=1266">Youtube</a>]</p>
             </li>
             
             <!-- <li class="flex-block">
