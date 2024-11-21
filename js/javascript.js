@@ -53,12 +53,14 @@ function loadMenubar() {
 				if($(this).attr('href').split('?')[0] === paths)
 					$(this).addClass('this-page');
 		});
+
 		$(this).find('.lang-kor').each(function(){
 			$(this).attr('href', location.href.split('?')[0] + '?lang=kor');
 		});
 		$(this).find('.lang-eng').each(function(){
 			$(this).attr('href', location.href.split('?')[0]);
 		});
+
 		//Click Event: dropmenu-down
 		$('.right-menu-button').on('click', function(e){
 			e.preventDefault();
