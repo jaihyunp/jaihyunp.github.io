@@ -168,11 +168,16 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
 
 /* Menubar */
 .menubar {
+    /* border:1pt solid red; */
     width: 100%;
+    max-width:1400px;
     margin-top:25px!important;
     z-index:999;
     display:flex;
-    position:absolute;}
+    position:absolute;
+    left:50%;
+    translate:-50%
+}
 .menubar * {position: relative;}
 .menubar .left-menu {
     margin-left:5%;
@@ -227,7 +232,7 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     margin:auto;
     margin-bottom:80px;
     display:block;}
-
+    
 /* special positions */
 .flex-block {
     display:flex;
