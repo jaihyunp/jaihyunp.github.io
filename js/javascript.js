@@ -57,7 +57,7 @@ function loadMenubar() {
 			$(this).attr('href', location.href.split('?')[0] + '?lang=kor');
 		});
 		$(this).find('.lang-eng').each(function(){
-			$(this).attr('href', location.href.split('?')[0] + '?lang=eng');
+			$(this).attr('href', location.href.split('?')[0]);
 		});
 		//Click Event: dropmenu-down
 		$('.right-menu-button').on('click', function(e){
@@ -65,7 +65,7 @@ function loadMenubar() {
 			$(this).parent().children('.right-menu-dropmenu').slideToggle(300);
 			return false;
 		});
-		$(this).find('.logo-link').attr('href','.'+'?lang='+lang);
+
 		show_lang($(this),lang);
 	});
 }
