@@ -37,7 +37,7 @@ SOFTWARE.
 
 <!DOCTYPE html>
 
-<html lang="en" style='display:none'>
+<html lang="en" style="display: none;">
 
 <head>
     <noscript><meta http-equiv="refresh" content="0;url=noscript.html"></noscript>
@@ -66,8 +66,9 @@ SOFTWARE.
         .main-profile * {position:relative!important}
         .main-profile > img {width:260px;position:relative;margin-left:auto;margin-right:20px;margin-top:10px}
         .main-profile > div {width:650px;position:relative;margin-bottom:0px;margin-top:auto;margin-right:auto;margin-left:40px}
-        .main-profile h1 {font-family:'noto-eng-i','noto-kor-i';font-size:30pt;color:black;letter-spacing:3px;font-weight:300}
-        .main-profile h2 {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:#101010;font-weight:300; letter-spacing:0.5pt}
+        .main-profile h1 {font-family:'noto-eng-i','noto-kor-i';font-size:30pt;letter-spacing:3px;font-weight:300}
+        .main-profile h2 {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;font-weight:300; letter-spacing:0.5pt}
+
 
         .social {margin-top:10px;margin-bottom:15px;display:flex}
         .social li {text-align:left;display:flex;margin-left:0;margin-right:30px}
@@ -75,7 +76,7 @@ SOFTWARE.
         .social img {width:28px;height:28px}
         .social p {display:none}
 
-        .bio {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;text-align:left!important;margin-top:15px;margin-bottom: 10px;letter-spacing:0.5pt;font-weight:100;word-wrap:break-word;hyphens:auto;}
+        .bio {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;text-align:left!important;margin-top:15px;margin-bottom: 10px;letter-spacing:0.5pt;font-weight:100;word-wrap:break-word;hyphens:auto;}
 
         .news, .topics{position:relative;z-index:20;margin:auto;margin-bottom:80px}
         .news *, .topics *{position:relative!important}
@@ -83,15 +84,15 @@ SOFTWARE.
         .news ol, .topics ol {margin-top:20px}
 
         .news ol li {list-style-type:none;margin-top:10px;padding-bottom:5px}
-        .news ol li p {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;margin:auto;text-align:left!important;letter-spacing: 0.5pt;margin-left:20px}
-        .news ol li h1 {min-width:100px;font-family:'noto-eng-i','noto-kor-i';font-size:11pt;color:black;margin:0px;margin-bottom:auto;text-align:left!important}
+        .news ol li p {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;margin:auto;text-align:left!important;letter-spacing: 0.5pt;margin-left:20px}
+        .news ol li h1 {min-width:100px;font-family:'noto-eng-i','noto-kor-i';font-size:11pt;margin:0px;margin-bottom:auto;text-align:left!important}
  
         .topics ol li {list-style-type:none;margin-top:10px;padding-bottom:5px;margin-bottom: 30px}
         .topics ol li div {margin-top: 0px;margin-left: 0px}
         .topics ol li h1 {font-family: 'noto-eng-i', 'noto-kor-i'; font-size: 13pt; color: indianred; text-align: left;margin-left: 0px;margin-bottom:5px;letter-spacing:2px;}
-        .topics ol li h2 {font-family: 'noto-eng-i', 'noto-kor-i'; font-size: 14pt; color: black; text-align: center;margin-left: 0px;margin-bottom:5px;letter-spacing:2px;font-weight:300;}
-        .topics ol li h3 {font-family: 'noto-eng-ii', 'noto-kor-ii'; font-size: 10pt; color: black; text-align: left;margin-left: 0px;margin-bottom:15px;letter-spacing:0px;font-weight:300;}
-        .topics ol li p {font-family:'noto-eng-i', 'noto-kor-i';font-size:11pt;color:black;margin: auto;text-align:left!important;word-wrap:break-word;hyphens:auto;letter-spacing:0.5pt}
+        .topics ol li h2 {font-family: 'noto-eng-i', 'noto-kor-i'; font-size: 14pt; text-align: center;margin-left: 0px;margin-bottom:5px;letter-spacing:2px;font-weight:300;}
+        .topics ol li h3 {font-family: 'noto-eng-ii', 'noto-kor-ii'; font-size: 10pt; text-align: left;margin-left: 0px;margin-bottom:15px;letter-spacing:0px;font-weight:300;}
+        .topics ol li p {font-family:'noto-eng-i', 'noto-kor-i';font-size:11pt;margin: auto;text-align:left!important;word-wrap:break-word;hyphens:auto;letter-spacing:0.5pt}
         .topics ol li img {margin: 0px;margin-bottom: 10px; margin-right:30px}
         .topics img {width: 150px; height: 150px; }
 
@@ -108,6 +109,12 @@ SOFTWARE.
 
             .social li {margin:auto}
         }
+
+        @media (prefers-color-scheme: dark) {
+            .main-profile > img {filter: none!important}
+            .social a{border-bottom:1pt solid #212121}
+            .news > h1, .topics > h1, .topics ol li h1 {color: #ffc107}
+        }
     </style>
 </head>
 
@@ -121,9 +128,9 @@ SOFTWARE.
         <div>
             <h1 class='kor'>박 재 현</h1>
             <h1 class='eng'>Jai Hyun PARK</h1>
-            
             <h2 class="eng">Researcher • CryptoLab • Lyon, France</h2>
             <h2 class="kor">전임연구원 • 크립토랩 • 프랑스 리옹</h2>
+
             <ul class='social'>
                 <li>
                     <a href='mailto:jaihyunp@cryptolab.co.kr' target='_blank'>
@@ -188,8 +195,8 @@ SOFTWARE.
         <ol>
             <li class="flex-block">
                 <h1>Jan 2025</h1>
-                <p class="eng">I will be delivering a 3-week lecture for <a href="https://sites.google.com/view/fhe-school2025/">FHE School 2025</a> at <a href="https://www.snu.ac.kr/">Seoul National University</a>.</p>
-                <p class="kor"><a href="https://www.snu.ac.kr/">서울대학교</a>에서 진행되는 <a href="https://sites.google.com/view/fhe-school2025/">FHE School 2025</a> 프로그램에서 3주간 강의할 예정입니다.</p>
+                <p class="eng">I delivered a 3-week lecture for <a href="https://sites.google.com/view/fhe-school2025/">FHE School 2025</a> at <a href="https://www.snu.ac.kr/">Seoul National University</a>.</p>
+                <p class="kor"><a href="https://www.snu.ac.kr/">서울대학교</a>에서 진행되는 <a href="https://sites.google.com/view/fhe-school2025/">FHE School 2025</a> 프로그램에서 3주간 강의했습니다.</p>
             </li>
 
             <li class="flex-block">

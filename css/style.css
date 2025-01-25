@@ -89,8 +89,18 @@ html, body { color: black; font-family: 'noto-eng','noto-kor' !important; height
 a {color:indianred;text-decoration:none;}
 a:hover {border-bottom: 1pt dashed black!important}
 b {position:relative!important;font-family: 'noto-eng-b','noto-kor-b'}
+p, h1, h2, h3 {color: black}
 img {display:block}
-
+#icon-sun {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+  }
+  #icon-moon {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+  }
 /* Header and Footer */
 header,footer {
     z-index: 900;
@@ -104,7 +114,9 @@ footer * {position: relative}
     z-index: 10;
     position: absolute;
     top:0px;bottom:0px;
-    left:0px;right:0px;}
+    left:0px;right:0px;
+    background-color: rgb(24,24,24)
+}
 footer ._footer-line {
     z-index: 20;
     display: block;
@@ -194,7 +206,7 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     text-decoration: none;}
 .menubar .right-menu a:hover,
 .menubar .right-menu .this-page{
-    color: indianred;!important;
+    color: indianred!important;
     transition:0.2s ease-in-out;}
 .menubar .right-menu .right-menu-menu{
     display:flex;
@@ -203,11 +215,14 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     position:relative;
     margin: auto;
     padding: 5px;
-    width:100px;
+    width:auto;
+    margin-left: 18px;
     height: 50px;
     line-height: 50px;
     border-radius:10px;
-    text-align:center;}
+    text-align:center;
+    /* border:solid red 5px */
+}
 .menubar .right-menu .right-menu-dropmenu,
 .menubar .right-menu .right-menu-button{display:none;}
 
@@ -320,4 +335,23 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     .grid-3-1-ul {
         display:grid;
         grid-template-columns: 50% 50%!important;}
+}
+
+.icon-sun {display:none}
+.icon-moon {display:inline;filter:none!important;width:15px; height:15px; margin:auto}
+@media (prefers-color-scheme:dark){
+    html, body { color: #F5F5DC; font-family: 'noto-eng','noto-kor' !important; height: 100%; background: #212121}
+    a {color:#FFC107}
+    a:hover {border-bottom: 1pt dashed #F5F5DC!important}
+    p, h1, h2, h3 {color: #F5F5DC}
+    img {filter:invert(90%)}
+    ._goto-top img{filter: none !important;}
+
+    .menubar .right-menu a {color: #F5F5DC!important}
+    .menubar .right-menu a:hover,
+    .menubar .right-menu .this-page{color: #ffc107!important;}
+    .menubar .right-menu .right-menu-dropmenu{background-color: rgba(10,10,10,0.9)}
+
+    .icon-sun {display:inline;filter:none!important;width:15px; height:15px; margin:auto}
+    .icon-moon {display:none}
 }
