@@ -145,58 +145,29 @@ function lastUpdated(){
 }
 
 
-// https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting
-// Return the system level color scheme, but if something's in local storage, return that
-// Unless the system scheme matches the the stored scheme, in which case... remove from local storage
-function getPreferredColorScheme(){
-	let systemScheme = 'light';
-	if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-	  systemScheme = 'dark';
-	}
-	let chosenScheme = systemScheme;
-  
-	if(localStorage.getItem("scheme")){
-	  chosenScheme = localStorage.getItem("scheme");
-	//   confirm("update to " + chosenScheme);
-	//   if(systemScheme === chosenScheme){
-		// localStorage.removeItem("scheme");
-	//   }
-	}
-  
-	return chosenScheme;
-  }
-  
-// Write chosen color scheme to local storage
-// Unless the system scheme matches the the stored scheme, in which case... remove from local storage
-// function savePreferredColorScheme(scheme){
-// 	// let systemScheme = 'light';
-// 	// if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-// 	// 	systemScheme = 'dark';
-// 	// }
-// 	// if(systemScheme === scheme){
-// 	// 	localStorage.removeItem("scheme");
-// 	// } else {
-// 		localStorage.setItem("scheme", scheme);
-// 	// }  ?
-// }
 
 // Get the current scheme, and apply the opposite
 function toggleColorScheme(){
-	let newScheme = "light";
-	let scheme = getPreferredColorScheme();
-	if (scheme === "light"){
-		newScheme = "dark";
-	}
-	applyPreferredColorScheme(newScheme);
-	// confirm(newScheme);
+	if (localStorage.getItem('darkmode'))
+		localStorage.removeItem('darkmode');
+	else
+		localStorage.setItem('darkmode', 'yes');
+
+	applyPreferredColorScheme();
 }
 
 // Apply the chosen color scheme by traversing stylesheet rules, and applying a medium.
-function applyPreferredColorScheme(scheme) {
-	// let systemScheme = 'light';
-	// if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-	// 	systemScheme = 'dark';
-	// }
+function applyPreferredColorScheme() {
+	let systemScheme = 'light';
+	let invScheme = 'dark';
+	if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+		systemScheme = 'dark';
+		invScheme = 'light';
+	}
+	let darkmode = false;
+	if(localStorage.getItem('darkmode'))
+		darkmode = true;
+
 	for (var s = 0; s < document.styleSheets.length; s++) {
 
 		for (var i = 0; i < document.styleSheets[s].cssRules.length; i++) {
@@ -205,37 +176,20 @@ function applyPreferredColorScheme(scheme) {
 			if (rule && rule.media && rule.media.mediaText.includes("prefers-color-scheme")) {
 				rule_media = rule.media.mediaText;
 
-				if (rule_media.includes("light")) {
-					new_rule_media = rule_media.replace("light", "dark");
+				// if (rule_media.includes("light") && darkmode) {
+				if (darkmode) {
+					new_rule_media = rule_media.replace(invScheme, systemScheme);
 				}
-				if (rule_media.includes("dark")) {
-					new_rule_media = rule_media.replace("dark", "light");
+				else {
+				// if (rule_media.includes("dark")) {
+					// new_rule_media = rule_media.replace("dark", "light");
+					new_rule_media = rule_media.replace(systemScheme, invScheme);
 				}
 				rule.media.deleteMedium(rule_media);
 				rule.media.appendMedium(new_rule_media);
-			//   switch (scheme) {
-			// 	  case "light":
-			// 		  rule.media.appendMedium("original-prefers-color-scheme");
-			// 		  if (rule.media.mediaText.includes("light")) rule.media.deleteMedium("(prefers-color-scheme: light)");
-			// 		  if (rule.media.mediaText.includes("dark")) rule.media.deleteMedium("(prefers-color-scheme: dark)");
-			// 		  break;
-			// 	  case "dark":
-			// 		  rule.media.appendMedium("(prefers-color-scheme: light)");
-			// 		  rule.media.appendMedium("(prefers-color-scheme: dark)");
-			// 		  if (rule.media.mediaText.includes("original")) rule.media.deleteMedium("original-prefers-color-scheme");
-			// 		  break;
-			// 	  default:
-			// 		  rule.media.appendMedium("(prefers-color-scheme: dark)");
-			// 		  if (rule.media.mediaText.includes("light")) rule.media.deleteMedium("(prefers-color-scheme: light)");
-			// 		  if (rule.media.mediaText.includes("original")) rule.media.deleteMedium("original-prefers-color-scheme");
-			// 		  break;
-			//   }
 			}
 		}
 	}
-	// confirm(scheme)
-	// savePreferredColorScheme(scheme);
-	localStorage.setItem("scheme", scheme);
 }
 
 $(document).ready(function()
@@ -252,7 +206,7 @@ $(document).ready(function()
 	lastUpdated();
 	$('html').css('display','block');
 
-	applyPreferredColorScheme(getPreferredColorScheme());
+	applyPreferredColorScheme();
 	const darkModePreference = window.matchMedia("(prefers-color-scheme: dark)");
-	darkModePreference.addEventListener("change", e => toggleColorScheme());
+	darkModePreference.addEventListener("change", e => applyPreferredColorScheme());
 });
