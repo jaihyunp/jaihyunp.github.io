@@ -34,7 +34,7 @@
 // SOFTWARE.
 //
 
-var versionUpdate='2.2.3';
+var versionUpdate='2.3.0';
 var lang = 'eng';
 var langs = ['eng','kor']
 
@@ -67,7 +67,13 @@ function loadMenubar() {
 			$(this).parent().children('.right-menu-dropmenu').slideToggle(300);
 			return false;
 		});
-
+		$(document).on("click", function(event){
+			var $trigger = $(".right-menu-dropmenu");
+			if($trigger !== event.target && !$trigger.has(event.target).length){
+				$(".right-menu-dropmenu").slideUp(0);
+			}            
+		});
+	
 		show_lang($(this),lang);
 	});
 }

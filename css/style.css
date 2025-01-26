@@ -350,8 +350,9 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     .menubar .right-menu a {color: #F5F5DC!important}
     .menubar .right-menu a:hover,
     .menubar .right-menu .this-page{color: #ffc107!important;}
-    .menubar .right-menu .right-menu-dropmenu{background-color: rgba(10,10,10,0.9)}
+    .menubar .right-menu .right-menu-dropmenu{background-color: rgba(5,5,5,0.9)}
 
+    ._overlay {background-color:black;}
     .icon-sun {display:inline;filter:none!important;width:15px; height:15px; margin:auto}
     .icon-moon {display:none}
 }
