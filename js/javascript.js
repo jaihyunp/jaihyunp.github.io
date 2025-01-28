@@ -34,7 +34,7 @@
 // SOFTWARE.
 //
 
-var versionUpdate='2.3.1';
+var versionUpdate='2.3.2';
 var lang = 'eng';
 var langs = ['eng','kor']
 
