@@ -13,7 +13,7 @@
 /*****************************************************************************
 MIT License
 
-Copyright (c) 2019-2024 Jai Hyun Park
+Copyright (c) 2019-2025 Jai Hyun Park
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -294,7 +294,7 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
         padding: 5px;
         display:block;
         border-radius:10px;
-        background-color: rgba(245,245,245,0.9);
+        background-color: rgba(245,245,245,0.95);
         display:none;}
     .menubar .right-menu .right-menu-dropmenu div{
         position: relative;
@@ -350,7 +350,7 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     .menubar .right-menu a {color: #F5F5DC!important}
     .menubar .right-menu a:hover,
     .menubar .right-menu .this-page{color: #ffc107!important;}
-    .menubar .right-menu .right-menu-dropmenu{background-color: rgba(5,5,5,0.9)}
+    .menubar .right-menu .right-menu-dropmenu{background-color: rgba(5,5,5,0.95)}
 
     ._overlay {background-color:black;}
     .icon-sun {display:inline;filter:none!important;width:15px; height:15px; margin:auto}
