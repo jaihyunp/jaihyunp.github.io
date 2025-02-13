@@ -150,8 +150,6 @@ function lastUpdated(){
 	}
 }
 
-
-
 // Get the current scheme, and apply the opposite
 function toggleColorScheme(){
 	if (localStorage.getItem('darkmode'))
