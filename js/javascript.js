@@ -34,7 +34,7 @@
 // SOFTWARE.
 //
 
-var versionUpdate='2.3.2';
+var versionUpdate='2.4.0';
 var lang = 'eng';
 var langs = ['eng','kor']
 
@@ -92,16 +92,16 @@ function loadFooter() {
 	});
 }
 
-function updateAge(){
-	if( $('.update-birth').length > 0 ){
-		var myAge;
-		var birth = new Date(Date.parse('1994/9/21')).getTime();
-		setInterval(function(){
-			myAge = new Number(new Date(new Date().getTime() - birth) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(10);
-			$('.update-birth p').text(myAge);
-		}, 100);
-	}
-}
+// function updateAge(){
+// 	if( $('.update-birth').length > 0 ){
+// 		var myAge;
+// 		var birth = new Date(Date.parse('1994/9/21')).getTime();
+// 		setInterval(function(){
+// 			myAge = new Number(new Date(new Date().getTime() - birth) / (1000 * 60 * 60 * 24 * 365.25)).toFixed(10);
+// 			$('.update-birth p').text(myAge);
+// 		}, 100);
+// 	}
+// }
 
 function update_lang(){
 	temp = location.href.split(/[?&#]+/);
@@ -196,12 +196,36 @@ function applyPreferredColorScheme() {
 	}
 }
 
+function toggleAudio()
+{
+	if( $('.playButton').length > 0 ){
+
+	const playButton = document.getElementById('playButton');
+	const playPauseIcon = document.getElementById('playPauseIcon');
+	const audio = document.getElementById('audio');
+
+	playButton.addEventListener('click', () => {
+	if (audio.paused) {
+		audio.play();
+		playPauseIcon.src = "assets/icons/pause.png";
+	} else {
+		audio.pause();
+		playPauseIcon.src = "assets/icons/play.png";
+	}
+	});
+
+	audio.addEventListener('ended', () => {
+	playPauseIcon.src = "assets/icons/play.png";
+	});
+	}
+}
+
 $(document).ready(function()
 {	
 	update_lang();
 	loadMenubar();
 	loadFooter();
-	updateAge();
+	toggleAudio();
 	
 	$(window).on('resize', function(){
 		$('.right-menu-dropmenu').hide();

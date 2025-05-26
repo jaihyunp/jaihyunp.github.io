@@ -35,21 +35,11 @@
 <url>
   <loc>https://jaihyunp.github.io/talks.html?lang=eng</loc>
   <lastmod>2023-09-28T10:24:15+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://jaihyunp.github.io/talks.html?lang=kor</loc>
   <lastmod>2023-09-28T10:24:15+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://jaihyunp.github.io/personal.html?lang=eng</loc>
-  <lastmod>2023-09-28T10:24:15+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://jaihyunp.github.io/personal.html?lang=kor</loc>
-  <lastmod>2023-09-28T10:24:15+00:00</lastmod>
-  <priority>0.64</priority>
+  <priority>1.00</priority>
 </url>
 </urlset>

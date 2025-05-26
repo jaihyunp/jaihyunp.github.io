@@ -109,12 +109,27 @@ SOFTWARE.
 
             .social li {margin:auto}
         }
+        
+        .play-btn{
+        background-color:transparent;
+        margin-top:0;
+        border: 1pt solid black;
+        border-radius: 3pt;
+        padding:3pt;
+        cursor:pointer;
+        }
+        .play-btn *{
+        width: 7pt;
+        height: 7pt;
+        }
 
         @media (prefers-color-scheme: dark) {
             .main-profile > img {filter: none!important}
             .social a{border-bottom:1pt solid #212121}
             .news > h1, .topics > h1, .topics ol li h1 {color: #E2C56C}
+            .play-btn{border:1pt solid #F5F5DC}
         }
+
     </style>
 </head>
 
@@ -125,10 +140,13 @@ SOFTWARE.
     <header id='header' class='flex-block wider-piece main-profile'>
 
         <img src='assets/imgs/profile-picture.jpg'>
+        <audio id="audio" preload="auto" style="display:none"><source src="assets/jai-hyun.mp3" type="audio/mp3"></audio>
         <div>
             <h1 class='kor'>박 재 현</h1>
             <h1 class='eng'>Jai Hyun PARK</h1>
-            <h2 class="eng">Researcher • CryptoLab • Lyon, France</h2>
+            <h2 class="eng">Researcher • CryptoLab • Lyon, France • 
+                <button id="playButton" class="play-btn"><img id="playPauseIcon" src="assets/icons/play.png" alt="Play Button"></button>
+            </h2>
             <h2 class="kor">전임연구원 • 크립토랩 • 프랑스 리옹</h2>
 
             <ul class='social'>
@@ -167,7 +185,6 @@ SOFTWARE.
 
             <p class='bio eng'>
                 Hi! I am a full-time researcher at CryptoLab in Lyon, France.
-                <!-- My advisor is <a href='http://www.math.snu.ac.kr/~jhcheon/xe2/'>Prof. Jung Hee Cheon</a>.</br></br> -->
                 I am interested in a broad range of topics in cryptography. My current research focuses on homomorphic encryption and its applications.
             </br></br>
                 I obtained my Ph.D. from the Department of Mathematical Sciences at Seoul National University, advised by <a href='http://www.math.snu.ac.kr/~jhcheon/xe2/' target='_blank'>Prof. Jung Hee Cheon</a>. Here is my 
@@ -195,14 +212,14 @@ SOFTWARE.
         <ol>
             <li class="flex-block">
                 <h1>Feb 2025</h1>
-                <p class='eng'>My first single-authored paper, "Ciphertext-Ciphertext Matrix Multiplication: Fast for Large Matrices," has been accepted to <a href="https://eurocrypt.iacr.org/2025/">Eurocrypt 2025</a>.</p>
-                <p class='kor'>첫 단독저자 논문 "Ciphertext-Ciphertext Matrix Multiplication: Fast for Large Matrices" 를 <a href="https://eurocrypt.iacr.org/2025/">Eurocrypt 2025</a> 에서 발표할 예정입니다.</p>
+                <p class='eng'>My first single-authored paper, <a href="https://ia.cr/2025/448" target='_blank'>"Ciphertext-Ciphertext Matrix Multiplication: Fast for Large Matrices,"</a> has been accepted to <a href="https://eurocrypt.iacr.org/2025/" target='_blank'>Eurocrypt 2025</a>.</p>
+                <p class='kor'>첫 단독저자 논문 <a href="https://ia.cr/2025/448" target='_blank'>"Ciphertext-Ciphertext Matrix Multiplication: Fast for Large Matrices"</a> 를 <a href="https://eurocrypt.iacr.org/2025/" target='_blank'>Eurocrypt 2025</a> 에서 발표할 예정입니다.</p>
             </li>
 
             <li class="flex-block">
                 <h1>Feb 2025</h1>
-                <p class='eng'>I gave a seminar on plaintext-ciphertext matrix multiplication at <a href='https://www.polytechnique.edu/'>École Polytechnique</a>.</p>
-                <p class='kor'><a href='https://www.polytechnique.edu/'>École Polytechnique</a>에서 plaintext-ciphertext matrix multiplication에 대해 세미나를 진행했습니다.</p>
+                <p class='eng'>I gave a seminar on plaintext-ciphertext matrix multiplication at <a href='https://www.polytechnique.edu/' target='_blank'>École Polytechnique</a>.</p>
+                <p class='kor'><a href='https://www.polytechnique.edu/' target='_blank'>École Polytechnique</a>에서 plaintext-ciphertext matrix multiplication에 대해 세미나를 진행했습니다.</p>
             </li>
 
             <li class="flex-block">
@@ -225,8 +242,8 @@ SOFTWARE.
 
             <li class="flex-block">
                 <h1>Aug 2024</h1>
-                <p class="eng">I complete my PhD course at Seoul National University. The title of my thesis is "Matrix Multiplication on Encrypted Data". </p>
-                <p class="kor">서울대학교 박사과정을 마쳤습니다! 졸업논문 제목은 "암호화된 상태에서의 행렬 곱셈에 관한 연구" 입니다.</p>                
+                <p class="eng">I complete my PhD course at Seoul National University. The title of my thesis is <a href="https://s-space.snu.ac.kr/handle/10371/215451" target='_blank'>"Matrix Multiplication on Encrypted Data".</a> </p>
+                <p class="kor">서울대학교 박사과정을 마쳤습니다! 졸업논문 제목은 <a href="https://s-space.snu.ac.kr/handle/10371/215451" target='_blank'>"암호화된 상태에서의 행렬 곱셈에 관한 연구"</a> 입니다.</p>
             </li>
 
             <li class="flex-block">
@@ -430,16 +447,16 @@ SOFTWARE.
                         [<a href='https://eprint.iacr.org/2022/280' target='_blank'>pdf</a>]
                     </h3>
                     <p class='eng' style="font-size:10pt;">
-                        Homomorphic evaluations generally incur a significant overhead. While knowing that data is confined to a narrow range can greatly reduce the overhead, such constraints are not always applicable. In this paper, we propose an efficient method for homomorphic evaluation of several functions over large ranges. 
+                        Homomorphic evaluations generally incur an overhead. While knowing that data is confined to a narrow range can reduce the overhead, such constraints are not always applicable. In this paper, we propose an efficient method for homomorphic evaluation of several functions over large ranges. 
                     </p>
                     <p class='kor' style="font-size:10pt">
-                        암호화된 계산은 일반적으로 상당한 오버헤드를 동반합니다. 데이터가 좁은 범위 내에 있다는 정보만으로도 계산량을 크게 줄일 수 있지만, 이러한 제약은 대부분의 경우 적용할 수 없습니다. 본 연구에서는 특정 함수들에 대해 넓은 범위에 분포된 데이터를 암호화된 상태에서 효율적으로 처리하는 방법을 제안합니다.
+                        암호화된 계산은 일반적으로 오버헤드를 동반합니다. 데이터가 좁은 범위 내에 있다는 정보만으로도 계산량을 줄일 수 있지만, 이러한 제약은 대부분의 경우 적용할 수 없습니다. 본 연구에서는 특정 함수들에 대해 넓은 범위에 분포된 데이터를 암호화된 상태에서 효율적으로 처리하는 방법을 제안합니다.
                     </p>
                 </div>
             </li>
 
         </ol>
-        <p class='eng' style="font-family:'noto-eng-i','noto-kor-i';font-weight:300;font-size:11pt;font-style:italic">For the complete list of my publications, please click <a href="publications.html?lang=eng">here</a>.</p>
+        <p class='eng' style="font-family:'noto-eng-i','noto-kor-i';font-weight:300;font-size:11pt;font-style:italic">For the complete list of my publications, please click <a href="publications.html">here</a>.</p>
         <p class='kor' style="font-family:'noto-eng-i','noto-kor-i';font-weight:300;font-size:11pt;font-style:italic">
             전체 연구 목록은 <a href="publications.html?lang=kor">여기</a>를 클릭해 주세요.
         </p>
@@ -452,4 +469,23 @@ SOFTWARE.
     <!-- javascript -->
     <script src="js/jquery.js"></script>
     <script src="js/javascript.js"></script>
+    <script>
+        const playButton = document.getElementById('playButton');
+        const playPauseIcon = document.getElementById('playPauseIcon');
+        const audio = document.getElementById('audio');
+
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playPauseIcon.src = "assets/icons/pause.png";
+            } else {
+                audio.pause();
+                playPauseIcon.src = "assets/icons/play.png";
+            }
+        });
+
+        audio.addEventListener('ended', () => {
+            playPauseIcon.src = "assets/icons/play.png";
+        });
+    </script>
 </body>

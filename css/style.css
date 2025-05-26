@@ -257,7 +257,7 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     overflow: auto;
     flex-direction: row;}
 .flex-block h1 {text-align:left;}
-.flex-block p {text-align:right;}
+.flex-block p {text-align:left;}
 .flex-block > * {
     align-self: center;
     padding:0;
@@ -266,24 +266,28 @@ footer ._goto-top:hover {background: rgba(200, 200, 180, 0.8);}
     width:100%;
     display:grid;
     grid-template-columns: 33.33% 33.33% 33.33%;}
-.grid-3-1-ul > li{
+.grid-2-1-ul {
+    width:100%;
+    display:grid;
+    grid-template-columns: 50% 50%;}
+.grid-3-1-ul > li, .grid-2-1-ul > li{
     margin:5px auto ;
     display: block;
     width: 90%;
     padding-left: 20px;
     border-left: 3px gray solid;}
-.grid-3-1-ul > li h1 {
+.grid-3-1-ul > li h1, .grid-2-1-ul > li h1 {
     position: relative;
     margin:auto;
     margin-left:0;}
-.grid-3-1-ul > li p {
+.grid-3-1-ul > li p, .grid-2-1-ul > li p {
     position: relative;
     margin:auto;
     margin-right:0;}
 .fixed {position:fixed;z-index:0}
 
 @media screen and (max-width: 700px) {
-    .grid-3-1-ul {display:block!important}
+    .grid-3-1-ul,.grid-2-1-ul {display:block!important}
 }
 
 @media screen and (max-width: 1000px) {
