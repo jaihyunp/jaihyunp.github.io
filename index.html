@@ -64,7 +64,7 @@ SOFTWARE.
     <style>
         .main-profile {z-index:20;margin:auto;padding-top:150px;position:relative;margin-bottom:38px}
         .main-profile * {position:relative!important}
-        .main-profile > img {width:260px;position:relative;margin-left:auto;margin-right:20px;margin-top:10px;border-radius:50%;overflow: hidden;border:1pt solid #F5F5DC}
+        .main-profile .profile-picture {width:260px;position:relative;margin-left:auto;margin-right:20px;margin-top:10px;border-radius:50%;overflow: hidden;border:1pt solid #F5F5DC}
         .main-profile > div {width:650px;position:relative;margin-bottom:0px;margin-top:auto;margin-right:auto;margin-left:40px}
         .main-profile h1 {font-family:'noto-eng-i','noto-kor-i';font-size:30pt;letter-spacing:3px;font-weight:300}
         .main-profile h2 {font-family:'noto-eng-i','noto-kor-i';font-size:11pt;font-weight:300; letter-spacing:0.5pt}
@@ -98,7 +98,7 @@ SOFTWARE.
 
         @media screen and (max-width: 1000px) {
             .main-profile{margin-bottom:80px;width:90%}
-            .main-profile > img {width:70%;margin:auto}
+            .main-profile .profile-picture {width:70%;margin:auto}
             .main-profile > div {width:100%;margin:auto}
             .main-profile h2{text-align:center!important}
 
@@ -139,7 +139,9 @@ SOFTWARE.
     <!-- header -->
     <header id='header' class='flex-block wider-piece main-profile'>
 
-        <img src='assets/imgs/profile-picture.jpg'>
+        <a href="gallery.html" style="border:none!important">
+        <img class='profile-picture' src='assets/imgs/profile-picture.jpg'>
+        </a>
         <audio id="audio" preload="auto" style="display:none"><source src="assets/jai-hyun.mp3" type="audio/mp3"></audio>
         <div>
             <h1 class='kor'>박 재 현</h1>
