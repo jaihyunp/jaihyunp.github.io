@@ -1,2 +1,2 @@
 # jaihyunp.github.io
-My first webpage
+Please refer to https://jaihyun.com/
